@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lora:wght@400;700&display=swap');
+
+/* ... [estilos anteriores] ... */
+
+.faq-item.open .faq-answer {
+  max-height: 200px; /* Altura suficiente para a resposta */
+}
+
+/* --- Seção 6: CTA Final --- */
+.final-cta-section {
+  background-color: var(--azul-yovel);
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  color: var(--branco-puro);
+}
+
+.final-cta-headline {
+  font-family: var(--font-serif);
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.final-cta-section .section-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1rem;
+}
+
+.final-cta-section .whatsapp-cta {
+  transform: scale(1.1);
+  margin-top: 1rem;
+}
+
+.final-cta-section .whatsapp-cta:hover {
+  transform: scale(1.15) translateY(-3px);
+}
+
+
+/* ... [media queries anteriores] ... */
