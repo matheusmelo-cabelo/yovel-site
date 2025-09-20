@@ -69,6 +69,36 @@ body {
   z-index: 1;
 }
 
+.language-switcher {
+  position: absolute;
+  top: 2.5rem;
+  right: 3rem;
+  z-index: 10;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.language-switcher button {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--branco-puro);
+  color: var(--branco-puro);
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.language-switcher button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.language-switcher button.active {
+  background-color: var(--ambar-sabio);
+  color: var(--azul-yovel);
+  border-color: var(--ambar-sabio);
+}
+
 .hero-content {
   position: relative;
   z-index: 2;
@@ -120,7 +150,7 @@ body {
   opacity: 0.9;
 }
 
-/* --- Seção 2: Simulador --- */
+/* --- Seção 2: Novo Simulador --- */
 .simulator-section {
   background-color: var(--branco-puro);
   padding: 5rem 2rem;
@@ -130,104 +160,152 @@ body {
   gap: 2rem;
 }
 
-.simulator-input-container {
-  display: flex;
-  align-items: center;
-  border: 1px solid var(--cinza-borda);
-  border-radius: 8px;
-  padding: 0.5rem 1rem;
-  font-size: 1.5rem;
-  color: var(--cinza-texto);
-}
-
-.simulator-input-container span {
-  margin-right: 0.5rem;
-}
-
-.simulator-input {
-  border: none;
-  outline: none;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--azul-yovel);
-  width: 150px;
-  background: none;
-}
-
-.comparison-container {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
+.calculator-wrapper {
   width: 100%;
-  max-width: 900px;
-  margin-top: 1rem;
-}
-
-.comparison-card {
+  max-width: 550px;
   background-color: var(--branco-puro);
+  border-radius: 16px;
   border: 1px solid var(--cinza-borda);
-  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.07);
   padding: 2rem;
-  width: 100%;
-  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.low-value-warning {
+  background-color: #fffbe6;
+  color: #9c6f00;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ffe58f;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.calculator-inputs {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-.yovel-card {
-  border: 2px solid var(--verde-libertas);
-  transform: scale(1.02);
-}
-
-.card-title {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  color: var(--azul-yovel);
-  margin: 0 0 1rem 0;
-  text-align: left;
-}
-
-.card-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 1rem;
   border-bottom: 1px solid var(--cinza-borda);
-  font-size: 1rem;
+  padding-bottom: 1.5rem;
 }
 
-.card-row.fee span:first-child {
+.input-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-row label {
+  font-size: 1rem;
   color: var(--cinza-texto);
 }
 
-.card-row:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.card-row.total {
-  font-weight: 700;
+.input-row input, .input-row select {
+  border: 1px solid var(--cinza-borda);
+  border-radius: 8px;
+  padding: 0.8rem;
   font-size: 1.2rem;
-  margin-top: 1rem;
+  font-weight: 700;
+  color: var(--azul-yovel);
+  background: var(--cinza-suave);
 }
 
-.yovel-advantage {
+.input-row input {
+  width: 60%;
+  text-align: right;
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-row select {
+  width: 35%;
+  border-left: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.swap-row {
+  display: flex;
+  justify-content: center;
+}
+
+.swap-button {
+  background: none;
+  border: 1px solid var(--cinza-borda);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  color: var(--azul-yovel);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.swap-button:hover {
+  transform: rotate(180deg);
+  background-color: var(--cinza-suave);
+}
+
+.calculator-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.breakdown-row.fee span:first-child {
+  color: var(--cinza-texto);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.fee-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.fee-dot.yovel { background-color: var(--ambar-sabio); }
+.fee-dot.network { background-color: var(--azul-yovel); }
+
+.breakdown-row.total-fees {
+  font-weight: 700;
+  color: var(--cinza-texto);
+  border-top: 1px dashed var(--cinza-borda);
+  padding-top: 1rem;
+}
+
+.breakdown-row.conversion {
+  font-weight: 700;
+  color: var(--azul-yovel);
+}
+
+.breakdown-row.rate {
   color: var(--verde-libertas);
   font-weight: 700;
-}
-
-.yovel-total {
-  color: var(--verde-libertas);
+  font-size: 1.1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--cinza-borda);
 }
 
 .savings-highlight {
   font-size: 1.2rem;
   color: var(--cinza-texto);
-  max-width: 500px;
+  max-width: 100%;
   line-height: 1.6;
-  margin-top: 2rem;
+  background-color: var(--cinza-suave);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--cinza-borda);
 }
 
 .savings-amount {
@@ -246,7 +324,11 @@ body {
   font-weight: 700;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  margin-top: 1rem;
+  text-decoration: none;
+}
+
+.calculator-wrapper .whatsapp-cta {
+    margin-top: 0;
 }
 
 .whatsapp-cta:hover {
@@ -305,6 +387,56 @@ body {
 .step-description {
   color: var(--cinza-texto);
   line-height: 1.6;
+}
+
+/* --- Seção de Benefícios --- */
+.benefits-section {
+  background-color: var(--branco-puro);
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.benefits-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.benefit-card {
+  background-color: var(--cinza-suave);
+  border: 1px solid var(--cinza-borda);
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+}
+
+.benefit-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--azul-yovel);
+  margin: 0;
+}
+
+.benefit-description {
+  color: var(--cinza-texto);
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 /* --- Seção 4: Tabela de Diferenciais --- */
@@ -470,6 +602,11 @@ body {
   .hero-trust-text {
     flex-direction: column;
     gap: 0.5rem;
+  }
+
+  .language-switcher {
+    top: 1.5rem;
+    right: 1.5rem;
   }
 
   .comparison-container {
