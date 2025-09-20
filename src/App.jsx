@@ -280,6 +280,7 @@ function App() {
   return (
     <div className="App">
       <header className="hero-section">
+        <div className="brand-name">YOVEL</div>
         <div className="language-switcher">
           <button onClick={() => setLanguage('pt')} className={language === 'pt' ? 'active' : ''}>PT</button>
           <button onClick={() => setLanguage('en')} className={language === 'en' ? 'active' : ''}>EN</button>
@@ -426,7 +427,9 @@ function App() {
       <section className="final-cta-section">
         <h2 className="final-cta-headline">{t('final_cta_title')}</h2>
         <p className="section-subtitle">{t('final_cta_subtitle')}</p>
-        <a href="https://wa.me/5521993765041" target="_blank" rel="noopener noreferrer" className="whatsapp-cta">{t('exclusive_cta')}</a>
+        <a href="https://wa.me/5521993765041" target="_blank" rel="noopener noreferrer" className="whatsapp-cta">
+              {t('exclusive_cta')}
+            </a>
       </section>
     </div>
   );
