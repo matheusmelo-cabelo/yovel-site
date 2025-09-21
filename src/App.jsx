@@ -20,9 +20,9 @@ const translations = {
     method_step_1_paragraph: 'Primeiro, estancamos a sangria. Mapeamos cada ponto de fricção em suas finanças internacionais e aplicamos uma estratégia para colocar, em média, 15% do seu orçamento de volta no seu bolso. Este é o capital que sempre foi seu, agora de volta ao seu controle. É a prova matemática de que nosso método funciona.',
     method_step_2_paragraph: 'Nós reinvestimos essa economia em inteligência. Com o capital que recuperamos, destravamos um nível de experiência antes inacessível. O dinheiro que você deixa de perder para os bancos se torna a ferramenta para acessar Salas VIP, otimizar passagens aéreas e ter a fluidez de gastar como um local, em qualquer lugar do mundo.',
 
-    // A Prova (Seção 4)
-    proof_section_title: 'Confiança que Atravessa Fronteiras.',
-    proof_highlight_dubai: 'Destaque em Dubai: Somos o parceiro de otimização financeira de confiança da [Nome da Agência de Escursão], ajudando sua clientela global a viajar de forma mais inteligente e gastar com mais sabedoria, seja de Dubai para a Europa ou da Suíça para o Brasil.',
+    // A Promessa (Seção 4)
+    promise_section_title: 'Nossa Promessa: A Estratégia da Chave Mestra.',
+    promise_section_text: 'A Yovel não é uma lista de serviços. Somos os detentores de um método único, projetado para um único propósito: transformar o atrito financeiro em um upgrade para o seu estilo de vida. Acreditamos que a otimização do seu dinheiro é apenas a primeira porta. O verdadeiro destino é a liberdade e a tranquilidade que vêm depois. Nossa promessa não é apenas economizar seu dinheiro, mas reinvesti-lo em inteligência para que você viva uma vida global mais rica e sem fricção.',
 
     // O Investimento (Seção 5)
     investment_section_title: 'Um Investimento, Não um Custo.',
@@ -58,9 +58,9 @@ const translations = {
     method_step_1_paragraph: 'First, we stop the bleeding. We map every point of friction in your international finances and apply a strategy to put, on average, 15% of your budget back in your pocket. This is capital that has always been yours, now back under your control. It is the mathematical proof that our method works.',
     method_step_2_paragraph: 'We reinvest that savings into intelligence. With the capital we recover, we unlock a level of experience that was previously inaccessible. The money you stop losing to banks becomes the tool to access VIP Lounges, optimize airfare, and have the fluidity to spend like a local, anywhere in the world.',
 
-    // The Proof (Section 4)
-    proof_section_title: 'Trust That Crosses Borders.',
-    proof_highlight_dubai: 'Highlight in Dubai: We are the trusted financial optimization partner of [Excursion Agency Name], helping their global clientele travel smarter and spend wiser, whether from Dubai to Europe or from Switzerland to Brazil.',
+    // The Promise (Section 4)
+    promise_section_title: 'Our Promise: The Master Key Strategy.',
+    promise_section_text: 'Yovel is not a list of services. We are the holders of a unique method, designed for a single purpose: to transform financial friction into an upgrade for your lifestyle. We believe that optimizing your money is just the first door. The true destination is the freedom and peace of mind that come after. Our promise is not just to save you money, but to reinvest it in intelligence so that you can live a richer, frictionless global life.',
 
     // The Investment (Section 5)
     investment_section_title: 'An Investment, Not a Cost.',
@@ -268,17 +268,12 @@ function App() {
         </div>
       </section>
 
-      {/* Seção 4: A Prova (Case de Sucesso Global) */}
-      <section className="proof-section white-background">
-        {/* Identidade Visual: Fundo Branco Puro. Uma imagem de alta qualidade que represente Dubai. */}
-        {/* O logo do seu parceiro (com permissão) e uma foto ou citação de destaque. */}
-        <h2 className="section-title serif-font">{t('proof_section_title')}</h2>
-        <div className="case-study-highlight">
-          {/* Placeholder for Dubai image */}
-          <img src="/assets/dubai-placeholder.jpg" alt="Dubai" className="dubai-image" />
-          {/* Placeholder for partner logo */}
-          <img src="/assets/partner-logo-placeholder.png" alt="Partner Logo" className="partner-logo" />
-          <p className="sans-serif-font">{t('proof_highlight_dubai')}</p>
+      {/* Seção 4: Nossa Promessa */}
+      <section className="promise-section soft-gray-background">
+        <h2 className="section-title serif-font">{t('promise_section_title')}</h2>
+        <div className="promise-content">
+          <span className="icon">🔑</span>
+          <p className="section-paragraph sans-serif-font">{t('promise_section_text')}</p>
         </div>
       </section>
 

@@ -271,8 +271,8 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Seção 4: A Prova */
-.proof-section {
+/* Seção 4: Nossa Promessa */
+.promise-section {
   padding: 5rem 2rem;
   display: flex;
   flex-direction: column;
@@ -280,7 +280,7 @@ body {
   gap: 2rem;
 }
 
-.case-study-highlight {
+.promise-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -288,18 +288,9 @@ body {
   max-width: 800px;
 }
 
-.dubai-image {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.partner-logo {
-  max-width: 150px;
-  height: auto;
-  margin-top: 1rem;
+.promise-content .icon {
+  font-size: 3rem;
+  color: var(--ambar-sabio);
 }
 
 /* Seção 5: O Investimento */
