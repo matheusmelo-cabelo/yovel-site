@@ -4,75 +4,42 @@ import './App.css';
 // --- Dicionário de Traduções ---
 const translations = {
   pt: {
-    // Hero
+    // Hero (Seção 1)
     hero_headline: 'Desbloqueie uma Vida Sem Fronteiras. Nós Engenheiramos a Estratégia Financeira. Você Vive o Upgrade.',
     hero_subheadline: 'Para Cidadãos Globais que suspeitam que sua vida internacional poderia ser mais barata e muito mais luxuosa. Nós provamos que sim, começando pelo seu dinheiro.',
-    hero_cta: '➡️ Iniciar minha cotação',
-    trust_text_1: 'Atendimento personalizado via WhatsApp',
-    trust_text_2: 'Cotação instantânea e transparente',
-    // Simulador
-    simulator_title: 'Veja na prática quanto você economiza.',
-    simulator_subtitle: 'Digite o valor que você quer enviar e veja o saldo final no seu cartão, já descontadas todas as taxas.',
-    you_send: 'Você envia',
-    recipient_gets: 'Beneficiário recebe',
-    yovel_fee: 'Taxa de Serviço Yovel',
-    network_fee: 'Taxa de Rede',
-    total_fees: 'Total em taxas',
-    exchange_rate_used: 'Câmbio utilizado',
-    low_value_warning: 'Para valores abaixo de R$ 700, aplicam-se taxas diferenciadas.',
-    savings_text: 'Você economiza',
-    savings_comparison: 'em comparação com outros provedores.',
-    specialist_cta: '💬 Falar com um especialista e ativar meu cartão',
-    // Como Funciona
-    how_it_works_title: 'Finanças globais, com a simplicidade do PIX.',
-    step_1_title: 'Você nos chama no WhatsApp',
-    step_1_desc: 'Nossa equipe concierge entende sua necessidade e gera sua cotação personalizada em minutos.',
-    step_2_title: 'Você envia um PIX',
-    step_2_desc: 'Transfira o valor em Reais para a conta segura da Yovel, como se estivesse fazendo qualquer pagamento do dia a dia.',
-    step_3_title: 'Seu saldo global é ativado',
-    step_3_desc: 'Nós cuidamos de toda a "mágica". Em minutos, seu saldo em Dólares fica disponível em seu cartão internacional, pronto para uso.',
-    exclusive_cta: '💬 Quero minha cotação exclusiva no WhatsApp',
-    // Benefícios
-    benefits_title: 'Uma Consultoria Completa',
-    benefits_subtitle: 'Além do melhor câmbio, a Yovel desbloqueia um mundo de benefícios para o cidadão global.',
-    benefit_1_title: 'Salas VIP com Desconto',
-    benefit_1_desc: 'Acesse salas VIP em aeroportos ao redor do mundo com descontos que só a nossa rede de parceiros oferece.',
-    benefit_2_title: 'Seguro Viagem Inteligente',
-    benefit_2_desc: 'Ajudamos você a escolher o seguro viagem com o melhor custo-benefício, evitando ciladas e garantindo sua tranquilidade.',
-    benefit_3_title: 'Passagens Aéreas Otimizadas',
-    benefit_3_desc: 'Nossa consultoria inclui a busca por passagens aéreas mais baratas, usando nosso conhecimento em milhas e programas de fidelidade.',
-    // Tabela
-    table_title: 'A escolha inteligente para o cidadão global.',
-    feature: 'Funcionalidade',
-    yovel_strategy: 'Estratégia Yovel',
-    other_providers: 'Outros Provedores',
-    iof: 'IOF',
-    iof_yovel: 'Zero (sempre)',
-    personal_consulting: 'Consultoria Pessoal',
-    personal_consulting_yovel: 'Especialista dedicado para otimizar sua viagem',
-    personal_consulting_others: 'Robôs, tickets e longas esperas',
-    speed: 'Velocidade',
-    speed_yovel: 'Minutos',
-    speed_others: 'Horas ou dias úteis',
-    exchange_rate: 'Câmbio',
-    exchange_rate_yovel: 'Otimizado e 100% transparente',
-    exchange_rate_others: 'Comercial + taxas embutidas',
-    simplicity: 'Simplicidade',
-    simplicity_yovel: 'Fale, pague e use',
-    simplicity_others: 'Cadastros, aprovações e múltiplos apps',
-    // FAQ
-    faq_title: 'Perguntas Frequentes',
-    faq_1_q: 'É seguro usar a Yovel?',
-    faq_1_a: 'Absolutamente. Usamos parceiros regulamentados e tecnologia de ponta para garantir que seu dinheiro esteja sempre seguro. A transparência é nosso pilar, e todo o processo é feito de forma clara e rastreável.',
-    faq_2_q: 'Como a Yovel consegue ter um câmbio melhor e sem IOF?',
-    faq_2_a: 'Nós operamos com um modelo de negócio otimizado e parcerias estratégicas que nos permitem acesso a taxas de câmbio mais vantajosas. Ao contrário dos bancos tradicionais, nossa estrutura é enxuta e focada em eficiência, repassando essa economia diretamente para você.',
-    faq_3_q: 'Preciso entender de criptomoedas para usar?',
-    faq_3_a: 'Não. A complexidade fica do nosso lado. Para você, a experiência é tão simples quanto fazer um PIX e usar um cartão. Cuidamos de toda a "mágica" para que você não precise se preocupar com nada além de aproveitar sua viagem.',
-    faq_4_q: 'O cartão funciona em qualquer lugar?',
-    faq_4_a: 'Sim. Nossos cartões parceiros possuem bandeira internacional, aceita em milhões de estabelecimentos e caixas eletrônicos ao redor do mundo. Onde seu cartão de crédito tradicional funciona, o seu cartão Yovel também funcionará.',
-    // CTA Final
-    final_cta_title: 'Pronto para restaurar a liberdade do seu dinheiro?',
-    final_cta_subtitle: 'Clique no botão abaixo e fale diretamente com um de nossos especialistas. Receba sua cotação sem compromisso e descubra por que cidadãos globais estão trocando a burocracia pela inteligência da Yovel.',
+    hero_cta: '➡️ Descobrir o Método Yovel',
+    trust_text_1: 'Estratégia Personalizada',
+    trust_text_2: 'Atendimento Concierge Global',
+
+    // O Problema (Seção 2)
+    problem_section_title: 'Sua vida é global. Seu sistema financeiro não é.',
+    problem_section_paragraph: 'Você já sentiu que paga uma "taxa de expatriado" invisível? Cada vez que seu dinheiro cruza uma fronteira, o atrito – taxas ocultas, burocracia, câmbio desfavorável – desgasta seu capital e limita seu potencial. Esta fricção não é um custo de vida. É uma falha de design. E nós a consertamos.',
+
+    // O Método Yovel (Seção 3)
+    method_section_title: 'Nosso Método: Da Otimização ao Upgrade.',
+    method_step_1_paragraph: 'Primeiro, estancamos a sangria. Mapeamos cada ponto de fricção em suas finanças internacionais e aplicamos uma estratégia para colocar, em média, 15% do seu orçamento de volta no seu bolso. Este é o seu capital recuperado. É a prova matemática de que nosso método funciona.',
+    method_step_2_paragraph: 'Nós reinvestimos essa economia em inteligência. Com o capital que recuperamos, destravamos um nível de experiência antes inacessível. O dinheiro que você deixa de perder para os bancos se torna a ferramenta para acessar Salas VIP, otimizar passagens aéreas e ter a fluidez de gastar como um local, em qualquer lugar do mundo.',
+
+    // A Prova (Seção 4)
+    proof_section_title: 'Confiança que Atravessa Fronteiras.',
+    proof_highlight_dubai: 'Destaque em Dubai: Somos o parceiro de otimização financeira de confiança da [Nome da Agência de Escursão], ajudando sua clientela global a viajar de forma mais inteligente e gastar com mais sabedoria, seja de Dubai para a Europa ou da Suíça para o Brasil.',
+
+    // O Investimento (Seção 5)
+    investment_section_title: 'Um Investimento, Não um Custo.',
+    engineering_fee_title: 'Taxa de Engenharia Estratégica: R$ 250',
+    engineering_fee_desc: 'Este é o investimento para nos ter como seu "CFO Internacional". Com ele, mergulhamos nas suas finanças, desenhamos seu plano de otimização e abrimos a porta do Gateway.',
+    upgrade_participation_title: 'Participação no Upgrade: 40% do Valor Gerado',
+    upgrade_participation_desc: 'Nós só vencemos quando você vence. Nossa remuneração é uma participação sobre todo o valor que geramos para você, seja na economia direta de capital ou nos benefícios de lifestyle que destravamos.',
+
+    // O Engenheiro (Seção 6)
+    engineer_section_title: 'O Estrategista por Trás da Yovel',
+    engineer_quote: '“Meu único objetivo é usar meu conhecimento para destravar um nível de liberdade financeira e de vida que meus clientes não sabiam ser possível. A Yovel é o método que criei para fazer isso acontecer.”',
+    engineer_name: '- [Seu Nome], Fundador',
+
+    // O Chamado Final (Seção 7)
+    final_cta_title: 'Pronto para girar a chave?',
+    final_cta_subtitle: 'A vida global que você quer — mais inteligente, mais luxuosa e com menos atrito — está a duas portas de distância. Mas tudo começa com um único passo.',
+    final_cta_button: '💬 Agendar Meu Diagnóstico',
   },
   en: {
     // Hero
@@ -270,16 +237,12 @@ function App() {
       return (value || 0).toLocaleString(locale, options);
   }
 
-  const faqs = [
-    { question: t('faq_1_q'), answer: t('faq_1_a') },
-    { question: t('faq_2_q'), answer: t('faq_2_a') },
-    { question: t('faq_3_q'), answer: t('faq_3_a') },
-    { question: t('faq_4_q'), answer: t('faq_4_a') }
-  ];
-
   return (
     <div className="App">
+      {/* Seção 1: O Hero (A Promessa da Chave Mestra) */}
       <header className="hero-section">
+        {/* Identidade Visual: Fundo com o vídeo sutil e cinematográfico dos "frutos da liberdade". */}
+        {/* Sobreposição translúcida do Azul Yovel. Logo da "Onda de Libertação" em destaque. */}
         <h1 className="brand-name">YOVEL</h1>
         <div className="language-switcher">
           <button onClick={() => setLanguage('pt')} className={language === 'pt' ? 'active' : ''}>PT</button>
@@ -288,7 +251,9 @@ function App() {
         <div className="hero-content">
           <h1 className="hero-headline">{t('hero_headline')}</h1>
           <p className="hero-subheadline">{t('hero_subheadline')}</p>
-          <a href="https://wa.me/5521993765041" target="_blank" rel="noopener noreferrer" className="hero-cta">{t('hero_cta')}</a>
+          <a href="https://wa.me/5521993765041" target="_blank" rel="noopener noreferrer" className="hero-cta amber-button">
+            {t('hero_cta')}
+          </a>
           <div className="hero-trust-text">
             <span>✅ {t('trust_text_1')}</span>
             <span>✅ {t('trust_text_2')}</span>
@@ -296,140 +261,91 @@ function App() {
         </div>
       </header>
 
-      <section id="simulator" className="simulator-section">
-        <h2 className="section-title">{t('simulator_title')}</h2>
-        <p className="section-subtitle">{t('simulator_subtitle')}</p>
-        
-        <div className="calculator-wrapper">
-            {yovelResult.isLowValue && (
-              <div className="low-value-warning">
-                {t('low_value_warning')}
-              </div>
-            )}
-            <div className="calculator-inputs">
-                <div className="input-row">
-                    <label>{t('you_send')}</label>
-                    <input 
-                        type="number" 
-                        value={inputValue}
-                        onChange={(e) => setInputValue(e.target.value)}
-                    />
-                    <select value={fromCurrency} onChange={(e) => setFromCurrency(e.target.value)}>
-                        <option value="BRL">BRL</option>
-                        <option value="USD">USD</option>
-                        <option value="EUR">EUR</option>
-                    </select>
-                </div>
-                <div className="swap-row">
-                    <button onClick={handleSwapCurrencies} className="swap-button" title="Inverter moedas">⇅</button>
-                </div>
-                 <div className="input-row">
-                    <label>{t('recipient_gets')}</label>
-                    <input type="text" value={formatCurrency(yovelResult.finalValue, toCurrency)} readOnly />
-                    <select value={toCurrency} onChange={(e) => setToCurrency(e.target.value)}>
-                        <option value="BRL">BRL</option>
-                        <option value="USD">USD</option>
-                        <option value="EUR">EUR</option>
-                    </select>
-                </div>
-            </div>
+      {/* Seção 2: O Problema (A Taxa de Fricção Global) */}
+      <section className="problem-section">
+        {/* Identidade Visual: Fundo Branco Puro para foco total na mensagem. */}
+        {/* Um elemento gráfico sutil e elegante representando "atrito" – talvez linhas finas e emaranhadas que se resolvem em uma linha reta no final da seção. */}
+        <h2 className="section-title serif-font">{t('problem_section_title')}</h2>
+        <p className="section-paragraph sans-serif-font">{t('problem_section_paragraph')}</p>
+      </section>
 
-            <div className="calculator-breakdown">
-                <div className="breakdown-row fee">
-                    <span><span className="fee-dot yovel"></span>{t('yovel_fee')} ({(yovelResult.serviceRate * 100)}%)</span>
-                    <span>- {formatCurrency(yovelResult.serviceFeeBRL, 'BRL')}</span>
-                </div>
-                <div className="breakdown-row fee">
-                    <span><span className="fee-dot network"></span>{t('network_fee')}</span>
-                    <span>- {formatCurrency(yovelResult.networkFeeBRL, 'BRL')}</span>
-                </div>
-                <div className="breakdown-row total-fees">
-                    <span>{t('total_fees')}</span>
-                    <span>= {formatCurrency(yovelResult.serviceFeeBRL + yovelResult.networkFeeBRL, 'BRL')}</span>
-                </div>
-                <div className="breakdown-row rate">
-                    <span>{t('exchange_rate_used')}</span>
-                    <span>{yovelResult.displayRate}</span>
-                </div>
-            </div>
-
-            {savings > 0 && (
-              <div className="savings-highlight">
-                {t('savings_text')} <span className="savings-amount">{formatCurrency(savings, 'BRL')}</span> {t('savings_comparison')} 
-              </div>
-            )}
-
-            <a href="https://wa.me/5521993765041" target="_blank" rel="noopener noreferrer" className="whatsapp-cta">
-              {t('specialist_cta')}
-            </a>
+      {/* Seção 3: O Método Yovel (Do Gateway ao Destination) */}
+      <section className="method-section soft-gray-background">
+        {/* Identidade Visual: Fundo em Cinza Suave (#F6F9FC). */}
+        <h2 className="section-title serif-font">{t('method_section_title')}</h2>
+        <div className="method-visual-proof">
+          <span className="icon">🚪</span>
+          <span className="label">DINHEIRO</span>
+          <span className="arrow">➡️</span>
+          <span className="icon">🔑</span>
+          <span className="label">CHAVE MESTRA</span>
+          <span className="arrow">➡️</span>
+          <span className="icon">🚪</span>
+          <span className="label">LIFESTYLE</span>
+        </div>
+        <div className="method-steps">
+          <div className="method-step">
+            <h3>Passo 1: O Gateway (A Otimização Financeira)</h3>
+            <p className="sans-serif-font">{t('method_step_1_paragraph')}</p>
+          </div>
+          <div className="method-step">
+            <h3>Passo 2: O Destino (O Upgrade de Lifestyle)</h3>
+            <p className="sans-serif-font">{t('method_step_2_paragraph')}</p>
+          </div>
         </div>
       </section>
 
-      <section className="how-it-works-section">
-        <h2 className="section-title">{t('how_it_works_title')}</h2>
-        <div className="steps-container">
-          <div className="step-card"><div className="step-icon">1</div><h3 className="step-title">{t('step_1_title')}</h3><p className="step-description">{t('step_1_desc')}</p></div>
-          <div className="step-card"><div className="step-icon">2</div><h3 className="step-title">{t('step_2_title')}</h3><p className="step-description">{t('step_2_desc')}</p></div>
-          <div className="step-card"><div className="step-icon">3</div><h3 className="step-title">{t('step_3_title')}</h3><p className="step-description">{t('step_3_desc')}</p></div>
+      {/* Seção 4: A Prova (Case de Sucesso Global) */}
+      <section className="proof-section white-background">
+        {/* Identidade Visual: Fundo Branco Puro. Uma imagem de alta qualidade que represente Dubai. */}
+        {/* O logo do seu parceiro (com permissão) e uma foto ou citação de destaque. */}
+        <h2 className="section-title serif-font">{t('proof_section_title')}</h2>
+        <div className="case-study-highlight">
+          {/* Placeholder for Dubai image */}
+          <img src="/assets/dubai-placeholder.jpg" alt="Dubai" className="dubai-image" />
+          {/* Placeholder for partner logo */}
+          <img src="/assets/partner-logo-placeholder.png" alt="Partner Logo" className="partner-logo" />
+          <p className="sans-serif-font">{t('proof_highlight_dubai')}</p>
         </div>
-        <a href="https://wa.me/5521993765041" target="_blank" rel="noopener noreferrer" className="whatsapp-cta">
-          {t('exclusive_cta')}
+      </section>
+
+      {/* Seção 5: O Investimento (A Chave para o Upgrade) */}
+      <section className="investment-section white-background">
+        {/* Identidade Visual: Layout minimalista em duas colunas sobre fundo Branco Puro. */}
+        {/* Ícones em Âmbar Sábio representando "Engenharia" e "Upgrade". */}
+        <h2 className="section-title serif-font">{t('investment_section_title')}</h2>
+        <div className="investment-details-container">
+          <div className="investment-card">
+            {/* Icone Engenharia */}
+            <h3 className="investment-card-title">{t('engineering_fee_title')}</h3>
+            <p className="investment-card-description">{t('engineering_fee_desc')}</p>
+          </div>
+          <div className="investment-card">
+            {/* Icone Upgrade */}
+            <h3 className="investment-card-title">{t('upgrade_participation_title')}</h3>
+            <p className="investment-card-description">{t('upgrade_participation_desc')}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Seção 6: O Engenheiro (Humanizando a Estratégia) */}
+      <section className="engineer-section soft-gray-background">
+        {/* Identidade Visual: Fundo em Cinza Suave. Uma foto sua profissional, mas acessível e confiante. */}
+        <img src="/assets/your-photo.jpg" alt="[Seu Nome]" className="engineer-photo" />
+        <h2 className="section-title serif-font">{t('engineer_section_title')}</h2>
+        <p className="engineer-quote sans-serif-font">{t('engineer_quote')}</p>
+        <p className="engineer-name sans-serif-font">{t('engineer_name')}</p>
+      </section>
+
+      {/* Seção 7: O Chamado Final (O Convite para Girar a Chave) */}
+      <section className="final-cta-section yovel-blue-background">
+        {/* Identidade Visual: Fundo sólido no Azul Yovel (#1B365D). */}
+        {/* A "Onda de Libertação" como marca d'água sutil. */}
+        <h2 className="final-cta-headline serif-font">{t('final_cta_title')}</h2>
+        <p className="section-subtitle sans-serif-font white-text">{t('final_cta_subtitle')}</p>
+        <a href="https://wa.me/5521993765041" target="_blank" rel="noopener noreferrer" className="whatsapp-cta amber-button">
+          {t('final_cta_button')}
         </a>
-      </section>
-
-      <section className="method-section">
-        <h2 className="section-title">{t('method_title')}</h2>
-        <p className="section-subtitle">{t('method_copy_1')}</p>
-        <p className="section-description">{t('method_copy_2')}</p>
-        <div className="method-steps-container">
-          <div className="method-step">
-            <h3 className="step-title">{t('gateway_step_title')}</h3>
-            <p className="step-description">{t('gateway_step_desc')}</p>
-          </div>
-          <div className="method-step">
-            <h3 className="step-title">{t('destination_step_title')}</h3>
-            <p className="step-description">{t('destination_step_desc_intro')}</p>
-            <ul>
-              <li>{t('destination_step_benefit_1')}</li>
-              <li>{t('destination_step_benefit_2')}</li>
-              <li>{t('destination_step_benefit_3')}</li>
-              <li>{t('destination_step_benefit_4')}</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="pricing-section">
-        <h2 className="section-title">{t('pricing_title')}</h2>
-        <p className="section-subtitle">{t('pricing_copy_intro')}</p>
-        <div className="pricing-details-container">
-          <div className="pricing-card">
-            <h3 className="pricing-card-title">{t('engineering_fee_title')}</h3>
-            <p className="pricing-card-description">{t('engineering_fee_desc')}</p>
-          </div>
-          <div className="pricing-card">
-            <h3 className="pricing-card-title">{t('upgrade_participation_title')}</h3>
-            <p className="pricing-card-description">{t('upgrade_participation_desc')}</p>
-          </div>
-        </div>
-        <p className="pricing-guarantee">{t('guarantee_text')}</p>
-      </section>
-
-      <section className="faq-section">
-        <h2 className="section-title">{t('faq_title')}</h2>
-        <div className="faq-container">
-          {faqs.map((faq, index) => (
-            <FaqItem key={index} faq={faq} index={index} openFaq={openFaq} setOpenFaq={setOpenFaq} />
-          ))}
-        </div>
-      </section>
-
-      <section className="final-cta-section">
-        <h2 className="final-cta-headline">{t('final_cta_title')}</h2>
-        <p className="section-subtitle">{t('final_cta_subtitle')}</p>
-        <a href="https://wa.me/5521993765041" target="_blank" rel="noopener noreferrer" className="whatsapp-cta">
-              {t('final_cta_button')}
-            </a>
       </section>
     </div>
   );
