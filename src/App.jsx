@@ -1,23 +1,23 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef } from 'react';
 import './App.css';
 
 // --- Dicionário de Traduções ---
 const translations = {
   pt: {
     // Hero (Seção 1)
-    hero_headline: 'Desbloqueie uma Vida Sem Fronteiras. Nós Engenheiramos a Estratégia Financeira. Você Vive o Upgrade.',
+    hero_headline: 'Desbloqueie uma Vida Sem Fronteiras. Nós Orquestramos a Estratégia Financeira. Você Vive o Upgrade.',
     hero_subheadline: 'Para Cidadãos Globais que suspeitam que sua vida internacional poderia ser mais barata e muito mais luxuosa. Nós provamos que sim, começando pelo seu dinheiro.',
-    hero_cta: '➡️ Descobrir o Método Yovel',
+    hero_cta: '➡️ Entender o Método Yovel',
     trust_text_1: 'Estratégia Personalizada',
     trust_text_2: 'Atendimento Concierge Global',
 
     // O Problema (Seção 2)
-    problem_section_title: 'Sua vida é global. Seu sistema financeiro não é.',
+    problem_section_title: 'A Taxa Invisível que Você Paga por Ser um Cidadão Global.',
     problem_section_paragraph: 'Você já sentiu que paga uma "taxa de expatriado" invisível? Cada vez que seu dinheiro cruza uma fronteira, o atrito – taxas ocultas, burocracia, câmbio desfavorável – desgasta seu capital e limita seu potencial. Esta fricção não é um custo de vida. É uma falha de design. E nós a consertamos.',
 
     // O Método Yovel (Seção 3)
     method_section_title: 'Nosso Método: Da Otimização ao Upgrade.',
-    method_step_1_paragraph: 'Primeiro, estancamos a sangria. Mapeamos cada ponto de fricção em suas finanças internacionais e aplicamos uma estratégia para colocar, em média, 15% do seu orçamento de volta no seu bolso. Este é o seu capital recuperado. É a prova matemática de que nosso método funciona.',
+    method_step_1_paragraph: 'Primeiro, estancamos a sangria. Mapeamos cada ponto de fricção em suas finanças internacionais e aplicamos uma estratégia para colocar, em média, 15% do seu orçamento de volta no seu bolso. Este é o capital que sempre foi seu, agora de volta ao seu controle. É a prova matemática de que nosso método funciona.',
     method_step_2_paragraph: 'Nós reinvestimos essa economia em inteligência. Com o capital que recuperamos, destravamos um nível de experiência antes inacessível. O dinheiro que você deixa de perder para os bancos se torna a ferramenta para acessar Salas VIP, otimizar passagens aéreas e ter a fluidez de gastar como um local, em qualquer lugar do mundo.',
 
     // A Prova (Seção 4)
@@ -34,83 +34,50 @@ const translations = {
     // O Engenheiro (Seção 6)
     engineer_section_title: 'O Estrategista por Trás da Yovel',
     engineer_quote: '“Meu único objetivo é usar meu conhecimento para destravar um nível de liberdade financeira e de vida que meus clientes não sabiam ser possível. A Yovel é o método que criei para fazer isso acontecer.”',
-    engineer_name: '- [Seu Nome], Fundador',
+    engineer_name: '- Matheus Melo, Fundador',
 
     // O Chamado Final (Seção 7)
     final_cta_title: 'Pronto para girar a chave?',
-    final_cta_subtitle: 'A vida global que você quer — mais inteligente, mais luxuosa e com menos atrito — está a duas portas de distância. Mas tudo começa com um único passo.',
+    final_cta_subtitle: 'Imagine sua próxima viagem sem a ansiedade de converter moedas ou o arrependimento de taxas surpresa. Esse upgrade começa com um único passo.',
     final_cta_button: '💬 Agendar Meu Diagnóstico',
   },
   en: {
-    // Hero
-    hero_headline: 'The smartest way to use your money around the world.',
-    hero_subheadline: 'A complete financial consultancy for your travels. We optimize your exchange rates, cards, and benefits so you can travel with more luxury and less cost.',
-    hero_cta: '➡️ Start my quote',
-    trust_text_1: 'Personalized support via WhatsApp',
-    trust_text_2: 'Instant and transparent quotes',
-    // Simulador
-    simulator_title: 'See in practice how much you save.',
-    simulator_subtitle: 'Enter the amount you want to send and see the final balance on your card, with all fees already deducted.',
-    you_send: 'You send',
-    recipient_gets: 'Recipient gets',
-    yovel_fee: 'Yovel Service Fee',
-    network_fee: 'Network Fee',
-    total_fees: 'Total fees',
-    exchange_rate_used: 'Exchange rate used',
-    low_value_warning: 'For values below BRL 700, different rates apply.',
-    savings_text: 'You save',
-    savings_comparison: 'compared to other providers.',
-    specialist_cta: '💬 Talk to a specialist and activate my card',
-    // Como Funciona
-    how_it_works_title: 'Global finances, with the simplicity of PIX.',
-    step_1_title: 'You call us on WhatsApp',
-    step_1_desc: 'Our concierge team understands your needs and generates your personalized quote in minutes.',
-    step_2_title: 'You send a PIX',
-    step_2_desc: 'Transfer the amount in Reais to Yovel\'s secure account, just like any other daily payment.',
-    step_3_title: 'Your global balance is activated',
-    step_3_desc: 'We take care of all the "magic". In minutes, your balance in Dollars is available on your international card, ready to use.',
-    exclusive_cta: '💬 I want my exclusive quote on WhatsApp',
-    // Benefícios
-    benefits_title: 'A Complete Consultancy',
-    benefits_subtitle: 'Beyond the best exchange rate, Yovel unlocks a world of benefits for the global citizen.',
-    benefit_1_title: 'Discounted VIP Lounges',
-    benefit_1_desc: 'Access VIP lounges at airports worldwide with discounts that only our partner network offers.',
-    benefit_2_title: 'Smart Travel Insurance',
-    benefit_2_desc: 'We help you choose the travel insurance with the best cost-benefit, avoiding pitfalls and ensuring your peace of mind.',
-    benefit_3_title: 'Optimized Airfare',
-    benefit_3_desc: 'Our consultancy includes searching for cheaper air tickets, using our knowledge of miles and loyalty programs.',
-    // Tabela
-    table_title: 'The smart choice for the global citizen.',
-    feature: 'Feature',
-    yovel_strategy: 'Yovel Strategy',
-    other_providers: 'Other Providers',
-    iof: 'IOF',
-    iof_yovel: 'Zero (always)',
-    personal_consulting: 'Personal Consulting',
-    personal_consulting_yovel: 'Dedicated specialist to optimize your trip',
-    personal_consulting_others: 'Bots, tickets, and long waits',
-    speed: 'Speed',
-    speed_yovel: 'Minutes',
-    speed_others: 'Hours or business days',
-    exchange_rate: 'Exchange Rate',
-    exchange_rate_yovel: 'Optimized and 100% transparent',
-    exchange_rate_others: 'Commercial + hidden fees',
-    simplicity: 'Simplicity',
-    simplicity_yovel: 'Call, pay, and use',
-    simplicity_others: 'Registrations, approvals, and multiple apps',
-    // FAQ
-    faq_title: 'Frequently Asked Questions',
-    faq_1_q: 'Is it safe to use Yovel?',
-    faq_1_a: 'Absolutely. We use regulated partners and cutting-edge technology to ensure your money is always safe. Transparency is our pillar, and the entire process is clear and traceable.',
-    faq_2_q: 'How does Yovel get a better exchange rate and no IOF?',
-    faq_2_a: 'We operate with an optimized business model and strategic partnerships that give us access to more advantageous exchange rates. Unlike traditional banks, our structure is lean and focused on efficiency, passing these savings directly to you.',
-    faq_3_q: 'Do I need to understand cryptocurrencies to use it?',
-    faq_3_a: 'No. The complexity is on our side. For you, the experience is as simple as making a PIX and using a card. We handle all the "magic" so you don\'t have to worry about anything but enjoying your trip.',
-    faq_4_q: 'Does the card work everywhere?',
-    faq_4_a: 'Yes. Our partner cards are internationally branded, accepted at millions of establishments and ATMs worldwide. Wherever your traditional credit card works, your Yovel card will too.',
-    // CTA Final
-    final_cta_title: 'Ready to restore your money\'s freedom?',
-    final_cta_subtitle: 'Click the button below and speak directly with one of our specialists. Get your no-obligation quote and discover why global citizens are swapping bureaucracy for Yovel\'s intelligence.',
+    // Hero (Section 1)
+    hero_headline: 'Unlock a Life Without Borders. We Orchestrate the Financial Strategy. You Live the Upgrade.',
+    hero_subheadline: 'For Global Citizens who suspect their international life could be cheaper and far more luxurious. We prove that it can, starting with your money.',
+    hero_cta: '➡️ Understand the Yovel Method',
+    trust_text_1: 'Personalized Strategy',
+    trust_text_2: 'Global Concierge Service',
+
+    // The Problem (Section 2)
+    problem_section_title: 'The Invisible Fee You Pay for Being a Global Citizen.',
+    problem_section_paragraph: 'Have you ever felt like you\'re paying an invisible "expatriate tax"? Every time your money crosses a border, friction—hidden fees, bureaucracy, unfavorable exchange rates—erodes your capital and limits your potential. This friction isn\'t a cost of living. It\'s a design flaw. And we fix it.',
+
+    // The Yovel Method (Section 3)
+    method_section_title: 'Our Method: From Optimization to Upgrade.',
+    method_step_1_paragraph: 'First, we stop the bleeding. We map every point of friction in your international finances and apply a strategy to put, on average, 15% of your budget back in your pocket. This is capital that has always been yours, now back under your control. It is the mathematical proof that our method works.',
+    method_step_2_paragraph: 'We reinvest that savings into intelligence. With the capital we recover, we unlock a level of experience that was previously inaccessible. The money you stop losing to banks becomes the tool to access VIP Lounges, optimize airfare, and have the fluidity to spend like a local, anywhere in the world.',
+
+    // The Proof (Section 4)
+    proof_section_title: 'Trust That Crosses Borders.',
+    proof_highlight_dubai: 'Highlight in Dubai: We are the trusted financial optimization partner of [Excursion Agency Name], helping their global clientele travel smarter and spend wiser, whether from Dubai to Europe or from Switzerland to Brazil.',
+
+    // The Investment (Section 5)
+    investment_section_title: 'An Investment, Not a Cost.',
+    engineering_fee_title: 'Strategic Engineering Fee: BRL 250',
+    engineering_fee_desc: 'This is the investment to have us as your "International CFO." With it, we dive into your finances, design your optimization plan, and open the Gateway door.',
+    upgrade_participation_title: 'Upgrade Participation: 40% of Generated Value',
+    upgrade_participation_desc: 'We only win when you win. Our compensation is a share of all the value we generate for you, whether in direct capital savings or the lifestyle benefits we unlock.',
+
+    // The Engineer (Section 6)
+    engineer_section_title: 'The Strategist Behind Yovel',
+    engineer_quote: '"My sole purpose is to use my knowledge to unlock a level of financial and life freedom that my clients didn\'t know was possible. Yovel is the method I created to make that happen."',
+    engineer_name: '- Matheus Melo, Founder',
+
+    // The Final Call (Section 7)
+    final_cta_title: 'Ready to turn the key?',
+    final_cta_subtitle: 'Imagine your next trip without the anxiety of converting currencies or the regret of surprise fees. That upgrade starts with a single step.',
+    final_cta_button: '💬 Schedule My Diagnosis',
   }
 };
 
@@ -138,7 +105,13 @@ function App() {
   const [toCurrency, setToCurrency] = useState('USD');
   const [openFaq, setOpenFaq] = useState(null);
 
+  const methodSectionRef = useRef(null);
+
   const t = (key) => translations[language][key] || key;
+
+  const handleScrollToMethod = () => {
+    methodSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
 
   // --- Taxas de Câmbio Fixas e Realistas ---
   const exchangeRates = {
@@ -251,9 +224,9 @@ function App() {
         <div className="hero-content">
           <h1 className="hero-headline">{t('hero_headline')}</h1>
           <p className="hero-subheadline">{t('hero_subheadline')}</p>
-          <a href="https://wa.me/5521993765041" target="_blank" rel="noopener noreferrer" className="hero-cta amber-button">
+          <button onClick={handleScrollToMethod} className="hero-cta amber-button">
             {t('hero_cta')}
-          </a>
+          </button>
           <div className="hero-trust-text">
             <span>✅ {t('trust_text_1')}</span>
             <span>✅ {t('trust_text_2')}</span>
@@ -270,7 +243,7 @@ function App() {
       </section>
 
       {/* Seção 3: O Método Yovel (Do Gateway ao Destination) */}
-      <section className="method-section soft-gray-background">
+      <section className="method-section soft-gray-background" ref={methodSectionRef}>
         {/* Identidade Visual: Fundo em Cinza Suave (#F6F9FC). */}
         <h2 className="section-title serif-font">{t('method_section_title')}</h2>
         <div className="method-visual-proof">

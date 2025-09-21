@@ -97,7 +97,7 @@ body {
   padding: 2rem;
   /* Identidade Visual: Fundo com o vídeo sutil e cinematográfico dos "frutos da liberdade". */
   /* Placeholder for video background */
-  background-image: url('../assets/video-placeholder.jpg'); /* Replace with actual video */
+  background-image: url('/assets/yovel-cup.png');
   background-size: cover;
   background-position: center;
   color: var(--branco-puro);
