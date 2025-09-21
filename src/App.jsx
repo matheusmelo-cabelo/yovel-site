@@ -5,8 +5,8 @@ import './App.css';
 const translations = {
   pt: {
     // Hero
-    hero_headline: 'A forma mais inteligente de usar seu dinheiro pelo mundo.',
-    hero_subheadline: 'Uma consultoria financeira completa para suas viagens. Otimizamos seu câmbio, cartões e benefícios para você viajar com mais luxo e menos custo.',
+    hero_headline: 'Desbloqueie uma Vida Sem Fronteiras. Nós Engenheiramos a Estratégia Financeira. Você Vive o Upgrade.',
+    hero_subheadline: 'Para Cidadãos Globais que suspeitam que sua vida internacional poderia ser mais barata e muito mais luxuosa. Nós provamos que sim, começando pelo seu dinheiro.',
     hero_cta: '➡️ Iniciar minha cotação',
     trust_text_1: 'Atendimento personalizado via WhatsApp',
     trust_text_2: 'Cotação instantânea e transparente',
@@ -280,7 +280,7 @@ function App() {
   return (
     <div className="App">
       <header className="hero-section">
-        <div className="brand-name">YOVEL</div>
+        <h1 className="brand-name">YOVEL</h1>
         <div className="language-switcher">
           <button onClick={() => setLanguage('pt')} className={language === 'pt' ? 'active' : ''}>PT</button>
           <button onClick={() => setLanguage('en')} className={language === 'en' ? 'active' : ''}>EN</button>
@@ -377,42 +377,42 @@ function App() {
         </a>
       </section>
 
-      <section className="benefits-section">
-        <h2 className="section-title">{t('benefits_title')}</h2>
-        <p className="section-subtitle">{t('benefits_subtitle')}</p>
-        <div className="benefits-container">
-          <div className="benefit-card">
-            <div className="benefit-icon">✈️</div>
-            <h3 className="benefit-title">{t('benefit_1_title')}</h3>
-            <p className="benefit-description">{t('benefit_1_desc')}</p>
+      <section className="method-section">
+        <h2 className="section-title">{t('method_title')}</h2>
+        <p className="section-subtitle">{t('method_copy_1')}</p>
+        <p className="section-description">{t('method_copy_2')}</p>
+        <div className="method-steps-container">
+          <div className="method-step">
+            <h3 className="step-title">{t('gateway_step_title')}</h3>
+            <p className="step-description">{t('gateway_step_desc')}</p>
           </div>
-          <div className="benefit-card">
-            <div className="benefit-icon">🛡️</div>
-            <h3 className="benefit-title">{t('benefit_2_title')}</h3>
-            <p className="benefit-description">{t('benefit_2_desc')}</p>
-          </div>
-          <div className="benefit-card">
-            <div className="benefit-icon">🎟️</div>
-            <h3 className="benefit-title">{t('benefit_3_title')}</h3>
-            <p className="benefit-description">{t('benefit_3_desc')}</p>
+          <div className="method-step">
+            <h3 className="step-title">{t('destination_step_title')}</h3>
+            <p className="step-description">{t('destination_step_desc_intro')}</p>
+            <ul>
+              <li>{t('destination_step_benefit_1')}</li>
+              <li>{t('destination_step_benefit_2')}</li>
+              <li>{t('destination_step_benefit_3')}</li>
+              <li>{t('destination_step_benefit_4')}</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <section className="differentiators-section">
-        <h2 className="section-title">{t('table_title')}</h2>
-        <div className="table-container">
-          <table className="differentiators-table">
-            <thead><tr><th>{t('feature')}</th><th>{t('yovel_strategy')}</th><th>{t('other_providers')}</th></tr></thead>
-            <tbody>
-              <tr><td>{t('iof')}</td><td><span className="check-mark">✔️</span> {t('iof_yovel')}</td><td>{fromCurrency === 'BRL' ? '3.8% (cartão)' : '0.38% (câmbio)'}</td></tr>
-              <tr><td>{t('personal_consulting')}</td><td><span className="check-mark">✔️</span> {t('personal_consulting_yovel')}</td><td>{t('personal_consulting_others')}</td></tr>
-              <tr><td>{t('speed')}</td><td><span className="check-mark">✔️</span> {t('speed_yovel')}</td><td>{t('speed_others')}</td></tr>
-              <tr><td>{t('exchange_rate')}</td><td><span className="check-mark">✔️</span> {t('exchange_rate_yovel')}</td><td>{t('exchange_rate_others')}</td></tr>
-              <tr><td>{t('simplicity')}</td><td><span className="check-mark">✔️</span> {t('simplicity_yovel')}</td><td>{t('simplicity_others')}</td></tr>
-            </tbody>
-          </table>
+      <section className="pricing-section">
+        <h2 className="section-title">{t('pricing_title')}</h2>
+        <p className="section-subtitle">{t('pricing_copy_intro')}</p>
+        <div className="pricing-details-container">
+          <div className="pricing-card">
+            <h3 className="pricing-card-title">{t('engineering_fee_title')}</h3>
+            <p className="pricing-card-description">{t('engineering_fee_desc')}</p>
+          </div>
+          <div className="pricing-card">
+            <h3 className="pricing-card-title">{t('upgrade_participation_title')}</h3>
+            <p className="pricing-card-description">{t('upgrade_participation_desc')}</p>
+          </div>
         </div>
+        <p className="pricing-guarantee">{t('guarantee_text')}</p>
       </section>
 
       <section className="faq-section">
@@ -428,7 +428,7 @@ function App() {
         <h2 className="final-cta-headline">{t('final_cta_title')}</h2>
         <p className="section-subtitle">{t('final_cta_subtitle')}</p>
         <a href="https://wa.me/5521993765041" target="_blank" rel="noopener noreferrer" className="whatsapp-cta">
-              {t('exclusive_cta')}
+              {t('final_cta_button')}
             </a>
       </section>
     </div>
