@@ -116,7 +116,7 @@ function App() {
             }}
         ></div>
         <h1 className="brand-name">
-            <img src="/assets/logo_yovel.svg" alt="Yovel Logo" />
+            YOVEL
         </h1>
         <div className="language-switcher">
           <button onClick={() => setLanguage('pt')} className={language === 'pt' ? 'active' : ''}>PT</button>

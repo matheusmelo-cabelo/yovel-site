@@ -173,11 +173,24 @@ body {
   top: 2rem;
   left: 2rem;
   z-index: 10;
+  font-family: var(--font-serif);
+  font-size: 2.5rem; /* Tamanho da fonte para o nome */
+  color: var(--branco-puro); /* Cor do texto */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
 }
 
-.brand-name img {
-    width: 120px; /* Ajuste o tamanho conforme necessário */
+.brand-name {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 10;
+  font-family: var(--font-serif);
+  font-size: 2.5rem; /* Tamanho da fonte para o nome */
+  color: var(--branco-puro); /* Cor do texto */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
 }
+
+
 
 .language-switcher {
   position: absolute;
@@ -723,9 +736,7 @@ body {
     left: 1.5rem;
   }
 
-  .brand-name img {
-      width: 100px;
-  }
+  
 
   .language-switcher {
     top: 2rem;
