@@ -6,7 +6,7 @@ import './App.css';
 const translations = {
   pt: {
     hero_headline: 'Desbloqueie uma Vida Sem Fronteiras. Nós Orquestramos a Estratégia Financeira. Você Vive o Upgrade.',
-    hero_subheadline: 'Somos um concierge financeiro que otimiza seu câmbio para eliminar taxas e, com a economia gerada, destrava benefícios de viagem como acesso a Salas VIP e passagens otimizadas.',
+    hero_subheadline: 'Somos um concierge financeiro que primeiro otimiza seu câmbio para eliminar taxas e, depois, usa a economia gerada para destravar benefícios de viagem como acesso a Salas VIP e passagens otimizadas.',
     hero_cta: 'Descobrir o Método Yovel',
     trust_text_1: 'Estratégia Personalizada',
     trust_text_2: 'Atendimento Concierge Global',
@@ -16,7 +16,7 @@ const translations = {
     method_step1_title: 'Passo 1: O Gateway (A Otimização Financeira)',
     method_step1_desc: 'Na prática, analisamos suas necessidades de câmbio e executamos a conversão de moeda da forma mais inteligente do mercado, eliminando o IOF e taxas de spread abusivas. É assim que estancamos a sangria, colocando em média 15% do seu orçamento de volta no seu bolso. Este é o seu capital recuperado.',
     method_step2_title: 'Passo 2: O Destino (O Upgrade de Lifestyle)',
-    method_step2_desc: 'Com o capital que recuperamos para você, aplicamos nossa expertise para encontrar e ativar benefícios reais. Nós reinvestimos essa economia em inteligência, transformando o dinheiro que você deixa de perder para os bancos na ferramenta para acessar Salas VIP, otimizar passagens aéreas e ter a fluidez de gastar como um local, em qualquer lugar do mundo.',
+    method_step2_desc: 'A economia que geramos não é apenas um número; é a ferramenta para o seu upgrade. Com o capital que agora está no seu bolso, nós te damos o acesso e a estratégia para destravar um nível de experiência antes inacessível. Nós transformamos o valor economizado em poder de compra para acessar Salas VIP, otimizar passagens aéreas.',
     partnership_section_title: 'Transformando Economia em Experiência.',
     partnership_body: 'Acreditamos que cada real economizado na sua transferência deve trabalhar para você. Por isso, a Yovel firma parcerias estratégicas para transformar o capital que recuperamos em experiências valiosas. Anunciamos nossa parceria com a Confins, que oferece aos clientes Yovel acesso a passagens aéreas com tarifas e condições especiais. Nós cuidamos da engenharia financeira; nossos parceiros cuidam do seu roteiro.',
     testimonial_section_title: 'A Confiança de Quem Vive Sem Fronteiras.',
