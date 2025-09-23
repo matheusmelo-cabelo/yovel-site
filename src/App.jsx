@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { useIntersection } from './useIntersection';
+import { useIntersection } from './useintersection';
 import './App.css';
 
 // --- Dicionário de Traduções ---
