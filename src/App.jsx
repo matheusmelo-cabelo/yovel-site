@@ -5,7 +5,7 @@ import './App.css';
 // --- Dicionário de Traduções ---
 const translations = {
   pt: {
-    hero_headline: 'Desbloqueie uma Vida Sem Fronteiras. Nós Orquestramos a Estratégia Financeira. Você Vive o Upgrade.',
+    hero_headline: 'Desbloqueie uma Vida Sem Fronteiras.<br />Nós Orquestramos a Estratégia Financeira.<br />Você Vive o Upgrade.',
     hero_subheadline: 'Somos um concierge financeiro que primeiro otimiza seu câmbio para eliminar taxas e, além disso, te entrega as estratégias para destravar benefícios de viagem como acesso a Salas VIP e passagens otimizadas.',
     hero_cta: 'Descobrir o Método Yovel',
     trust_text_1: 'Estratégia Personalizada',
@@ -34,7 +34,7 @@ const translations = {
     final_cta_button: 'Agendar Meu Diagnóstico Gratuito',
   },
   en: {
-    hero_headline: 'Unlock a Life Without Borders. We Orchestrate the Financial Strategy. You Live the Upgrade.',
+    hero_headline: 'Unlock a Life Without Borders.<br />We Orchestrate the Financial Strategy.<br />You Live the Upgrade.',
     hero_subheadline: 'We are a financial concierge that first optimizes your currency exchange to eliminate fees and then delivers strategies to unlock travel benefits like VIP lounge access and optimized airfare.',
     hero_cta: 'Discover the Yovel Method',
     trust_text_1: 'Personalized Strategy',
@@ -121,7 +121,7 @@ function App() {
         </div>
         <div className="hero-content">
             <FadeInSection>
-                <h1 className="hero-headline">{t('hero_headline')}</h1>
+                <h1 className="hero-headline" dangerouslySetInnerHTML={{ __html: t('hero_headline') }}></h1>
             </FadeInSection>
             <FadeInSection>
                 <p className="hero-subheadline">{t('hero_subheadline')}</p>
