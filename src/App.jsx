@@ -6,64 +6,61 @@ import './App.css';
 const translations = {
   pt: {
     hero_headline: 'Desbloqueie uma Vida Sem Fronteiras. Nós Orquestramos a Estratégia Financeira. Você Vive o Upgrade.',
-    hero_subheadline: 'Somos um concierge financeiro que otimiza seu câmbio para eliminar taxas e, além disso, te entrega as estratégias para destravar benefícios de viagem como acesso a Salas VIP e passagens otimizadas.',
+    hero_subheadline: 'Somos um concierge financeiro que primeiro otimiza seu câmbio para eliminar taxas e, além disso, te entrega as estratégias para destravar benefícios de viagem como acesso a Salas VIP e passagens otimizadas.',
     hero_cta: 'Descobrir o Método Yovel',
     trust_text_1: 'Estratégia Personalizada',
     trust_text_2: 'Atendimento Concierge Global',
     problem_section_title: 'Sua vida é global. Seu sistema financeiro não é.',
-    problem_section_paragraph: 'Você já sentiu que paga uma "taxa de expatriado" invisível? Cada vez que seu dinheiro cruza uma fronteira, o atrito – taxas ocultas, burocracia, câmbio desfavorável – desgasta seu capital e limita seu potencial. Esta fricção não é um custo de vida. É uma falha de design. E nós a consertamos.',
-    method_section_title: 'Nosso Método: Da Otimização ao Upgrade.',
-    method_step1_title: 'Passo 1: O Gateway (A Otimização Financeira)',
+    problem_section_paragraph: 'Você já sentiu que paga uma "taxa de fricção global"? Cada vez que seu dinheiro cruza uma fronteira, o atrito — taxas ocultas, burocracia, câmbio desfavorável — desgasta seu capital. Esta fricção não é um custo de vida. É uma falha de design do sistema financeiro tradicional. E nós a consertamos.',
+    method_section_title: 'O Método Yovel: Dois Pilares de Otimização.',
+    method_step1_title: '1. Liberte seu dinheiro do sistema.',
     method_step1_desc: 'Na prática, analisamos suas necessidades de câmbio e executamos a conversão de moeda da forma mais inteligente do mercado, eliminando o IOF e taxas de spread abusivas. É assim que estancamos a sangria, colocando em média 15% do seu orçamento de volta no seu bolso. Este é o seu capital recuperado.',
-    method_step2_title: 'Passo 2: O Destino (O Upgrade de Lifestyle)',
-    method_step2_desc: 'Nossa otimização não para no câmbio. A economia de capital que geramos é apenas o começo. Como seus estrategistas, nós também te entregamos o conhecimento para destravar um novo patamar de conforto e economia. Mostramos a você os caminhos e os hacks para acessar Salas VIP por uma fração do preço, encontrar passagens aéreas com melhor custo-benefício e aproveitar vantagens que o sistema de viagens tradicional não revela.',
+    method_step2_title: '2. Transforme Economia em Poder de Compra.',
+    method_step2_desc: 'Nossa otimização não para no câmbio. A economia de capital que geramos é apenas o começo. Como seus estrategistas, nós também te entregamos o conhecimento para destravar um novo patamar de conforto e economia. Mostramos a você os caminhos para acessar Salas VIP por uma fração do preço, encontrar passagens aéreas com melhor custo-benefício e aproveitar vantagens que o sistema de viagens tradicional não revela.',
     partnership_section_title: 'Transformando Economia em Experiência.',
     partnership_body: 'Acreditamos que cada real economizado na sua transferência deve trabalhar para você. Por isso, a Yovel firma parcerias estratégicas para transformar o capital que recuperamos em experiências valiosas. Anunciamos nossa parceria com a Confins, que oferece aos clientes Yovel acesso a passagens aéreas com tarifas e condições especiais. Nós cuidamos da engenharia financeira; nossos parceiros cuidam do seu roteiro.',
     testimonial_section_title: 'A Confiança de Quem Vive Sem Fronteiras.',
     testimonial_quote: '“Com a consultoria da Yovel, minha conversão de Euros ficou 1,4% mais barata do que em qualquer outra plataforma do mercado. Mas a verdadeira mágica aconteceu no aeroporto. O acesso à sala VIP, que me custaria R$ 320, com a estratégia deles saiu por apenas R$ 178 – uma economia de 44%. A Yovel não entrega apenas um câmbio melhor; entrega uma experiência de viagem mais inteligente e vantajosa.”',
     testimonial_author: '- Patricia Brambila, Cidadã Global',
-    investment_section_title: 'Um Investimento, Não um Custo.',
-    engineering_fee_title: 'Taxa de Engenharia Estratégica: R$ 250',
-    engineering_fee_desc: 'Este é o investimento para nos ter como seu "CFO Internacional". Com ele, mergulhamos nas suas finanças, desenhamos seu plano de otimização e abrimos a porta do Gateway.',
-    upgrade_participation_title: 'Participação no Upgrade: 40% do Valor Gerado',
-    upgrade_participation_desc: 'Nós só vencemos quando você vence. Nossa remuneração é uma participação sobre todo o valor que geramos para você, seja na economia direta de capital ou nos benefícios de lifestyle que destravamos.',
+    investment_section_title: 'Um Investimento em Estratégia, Não um Custo.',
+    investment_section_subtitle: 'A Yovel não cobra pelo que fazemos, mas pelo valor que geramos.',
+    investment_section_body: 'Nosso compromisso é com o seu sucesso. Por isso, a nossa remuneração é uma <strong>participação sobre o valor que geramos para você</strong>, não sobre o que você gasta. Isso significa que só somos remunerados quando conseguimos gerar economia ou destravar benefícios. Se não há ganho para você, não há custo para você. É um compromisso total com a sua vitória.',
     engineer_section_title: 'O Estrategista por Trás da Yovel',
     engineer_quote: '“Meu único objetivo é usar meu conhecimento para destravar um nível de liberdade financeira e de vida que meus clientes não sabiam ser possível. A Yovel é o método que criei para fazer isso acontecer.”',
     engineer_name: '- Matheus Melo, Fundador',
+    faq_section_paragraph: 'Você pode usar a Yovel apenas para otimizar suas transferências ou pode aproveitar a nossa consultoria para otimizar suas viagens. A escolha é sua.',
     final_cta_title: 'Pronto para girar a chave?',
-    final_cta_subtitle: 'A vida global que você quer — mais inteligente, mais luxuosa e com menos atrito — está a duas portas de distância. Mas tudo começa com um único passo.',
-    final_cta_button: 'Agendar Meu Diagnóstico',
+    final_cta_subtitle: 'A vida global que você quer — mais inteligente, mais luxuosa e com menos atrito — está a um clique de distância. Tudo começa com um único passo.',
+    final_cta_button: 'Agendar Meu Diagnóstico Gratuito',
   },
-  en: { // Simplified EN for brevity
-    hero_headline: 'Unlock a Life Without Borders. We Orchestrate, You Upgrade.',
-    hero_subheadline: 'For Global Citizens who suspect their international life could be cheaper and more luxurious.',
+  en: {
+    hero_headline: 'Unlock a Life Without Borders. We Orchestrate the Financial Strategy. You Live the Upgrade.',
+    hero_subheadline: 'We are a financial concierge that first optimizes your currency exchange to eliminate fees and then delivers strategies to unlock travel benefits like VIP lounge access and optimized airfare.',
     hero_cta: 'Discover the Yovel Method',
     trust_text_1: 'Personalized Strategy',
     trust_text_2: 'Global Concierge Service',
-    problem_section_title: 'The Invisible Fee of Being a Global Citizen.',
-    problem_section_paragraph: 'Every time your money crosses a border, friction erodes your capital. This isn\'t a cost of living. It\'s a design flaw. We fix it.',
-    method_section_title: 'The Yovel Method: Simple, Transparent, Powerful.',
-    method_step1_title: 'Step 1: The Gateway',
-    method_step1_desc: 'We analyze your financial and tax structure to find friction points. Then, we design a plan to open your "Gateway"—the most efficient route for your money to enter the global financial system.',
-    method_step2_title: 'Step 2: The Destination',
-    method_step2_desc: 'With the Gateway established, your capital now flows intelligently. The "Destination" is the application of this optimized capital: for investments, luxury travel at reduced costs, or simply living your global life with more purchasing power.',
-    partnership_section_title: 'The Upgrade in Action: Confins Partnership',
-    partnership_section_subtitle: 'Where savings become experience.',
-    partnership_body: 'After optimizing your finances, we connect you with our travel partner, Confins. The capital we recover becomes negotiating power for better flights.',
-    testimonial_section_title: 'A Global Citizen\'s Journey',
-    testimonial_quote: '"I had no idea how much I was leaving on the table. Yovel not only saved me money but gave me a clarity and peace of mind that are worth so much more. It\'s like having a CFO for my international life."',
-    testimonial_author: '- Yovel Client, Digital Nomad',
-    investment_section_title: 'An Investment, Not a Cost.',
-    engineering_fee_title: 'Strategic Engineering Fee: BRL 250',
-    engineering_fee_desc: 'The investment to design your optimization plan and open the Gateway.',
-    upgrade_participation_title: 'Upgrade Participation: 40% of Generated Value',
-    upgrade_participation_desc: 'We only win when you win. Our fee is a share of the value we generate for you.',
+    problem_section_title: 'Your life is global. Your financial system is not.',
+    problem_section_paragraph: 'Have you ever felt like you\'re paying a "global friction tax"? Every time your money crosses a border, friction—hidden fees, bureaucracy, unfavorable exchange rates—erodes your capital. This friction isn\'t a cost of living. It\'s a design flaw in the traditional financial system. And we fix it.',
+    method_section_title: 'The Yovel Method: Two Pillars of Optimization.',
+    method_step1_title: '1. Free Your Money from the System.',
+    method_step1_desc: 'In practice, we analyze your currency exchange needs and execute the conversion in the most intelligent way on the market, eliminating IOF and abusive spread fees. This is how we stop the bleeding, putting an average of 15% of your budget back in your pocket. This is your recovered capital.',
+    method_step2_title: '2. Turn Savings into Purchasing Power.',
+    method_step2_desc: 'Our optimization doesn\'t stop at exchange rates. The capital savings we generate are just the beginning. As your strategists, we also provide the knowledge to unlock a new level of comfort and savings. We show you the paths to access VIP lounges for a fraction of the price, find more cost-effective airline tickets, and take advantage of perks the traditional travel system doesn\'t reveal.',
+    partnership_section_title: 'Turning Savings into Experience.',
+    partnership_body: 'We believe every dollar saved on your transfer should work for you. That\'s why Yovel forms strategic partnerships to turn the capital we recover into valuable experiences. We are announcing our partnership with Confins, which offers Yovel clients access to airline tickets with special rates and conditions. We handle the financial engineering; our partners handle your itinerary.',
+    testimonial_section_title: 'The Trust of Those Who Live Without Borders.',
+    testimonial_quote: '“With Yovel\'s consulting, my Euro conversion was 1.4% cheaper than on any other platform on the market. But the real magic happened at the airport. Access to the VIP lounge, which would have cost me BRL 320, was only BRL 178 with their strategy – a 44% savings. Yovel doesn\'t just deliver a better exchange rate; it delivers a smarter, more advantageous travel experience.”',
+    testimonial_author: '- Patricia Brambila, Global Citizen',
+    investment_section_title: 'An Investment in Strategy, Not a Cost.',
+    investment_section_subtitle: 'Yovel doesn\'t charge for what we do, but for the value we generate.',
+    investment_section_body: 'Our commitment is to your success. Therefore, our compensation is a <strong>share of the value we generate for you</strong>, not what you spend. This means we only get paid when we manage to generate savings or unlock benefits. If there is no gain for you, there is no cost to you. It is a total commitment to your victory.',
     engineer_section_title: 'The Strategist Behind Yovel',
-    engineer_quote: '“My sole purpose is to use my knowledge to unlock a level of financial and life freedom for my clients. Yovel is the method.”',
+    engineer_quote: '“My sole objective is to use my knowledge to unlock a level of financial and life freedom that my clients didn\'t know was possible. Yovel is the method I created to make that happen.”',
     engineer_name: '- Matheus Melo, Founder',
+    faq_section_paragraph: 'You can use Yovel just to optimize your transfers, or you can take advantage of our consulting to optimize your travels. The choice is yours.',
     final_cta_title: 'Ready to turn the key?',
-    final_cta_subtitle: 'Imagine your next trip without the anxiety of currency conversion or surprise fees.',
-    final_cta_button: 'Schedule My Diagnosis',
+    final_cta_subtitle: 'The global life you want—smarter, more luxurious, and with less friction—is just a click away. It all starts with a single step.',
+    final_cta_button: 'Schedule My Free Diagnosis',
   }
 };
 
@@ -232,16 +229,8 @@ function App() {
       <section className="investment-section white-background">
         <FadeInSection>
             <h2 className="section-title serif-font">{t('investment_section_title')}</h2>
-            <div className="investment-details-container">
-                <div className="investment-card">
-                    <h3 className="investment-card-title">{t('engineering_fee_title')}</h3>
-                    <p className="investment-card-description">{t('engineering_fee_desc')}</p>
-                </div>
-                <div className="investment-card">
-                    <h3 className="investment-card-title">{t('upgrade_participation_title')}</h3>
-                    <p className="investment-card-description">{t('upgrade_participation_desc')}</p>
-                </div>
-            </div>
+            <h3 className="section-subtitle sans-serif-font">{t('investment_section_subtitle')}</h3>
+            <p className="section-paragraph sans-serif-font" dangerouslySetInnerHTML={{ __html: t('investment_section_body').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }}></p>
         </FadeInSection>
       </section>
 
@@ -254,6 +243,13 @@ function App() {
             <h2 className="section-title serif-font">{t('engineer_section_title')}</h2>
             <p className="engineer-quote sans-serif-font">{t('engineer_quote')}</p>
             <p className="engineer-name sans-serif-font">{t('engineer_name')}</p>
+        </FadeInSection>
+      </section>
+
+      {/* Seção de FAQ */}
+      <section className="faq-section soft-gray-background">
+        <FadeInSection>
+          <p className="section-paragraph sans-serif-font">{t('faq_section_paragraph')}</p>
         </FadeInSection>
       </section>
 
